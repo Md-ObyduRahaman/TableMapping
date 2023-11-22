@@ -38,6 +38,7 @@ public class PostCommentController {
 
     @PostMapping(path = "/posts")
     public ResponseEntity<Post> createPost(@RequestBody Post post) {
+        System.out.println();
         return new ResponseEntity<>(postService.createPost(post), HttpStatus.CREATED);
     }
 }
